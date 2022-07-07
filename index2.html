@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <p>Nhap ban kinh 1</p>
+  <input id="text1" type="text">
+    <p>Nhap ban kinh 2</p>
+    <input id="text2" type="text">
+      <button onClick="tiLe()"> kiem tra</button>
+      <script>
+
+        function dienTichvaChuVi(radius) {
+        let dienTich = radius * radius * Math.PI;
+        let chuVi = 2 * radius * Math.PI;
+        let khoChua = [];
+        khoChua.push(dienTich,chuVi);
+        return khoChua;
+        // document.write("dien tich hinh 1 ="+dienTichvaChuVi(radius1)[0]+"dien tich hinh 2 = "+ dienTichvaChuVi(radius2)[0]+"chu vi hinh 1 = "+dienTichvaChuVi(radius1)[1]+"chu vi hinh 2 ="+dienTichvaChuVi(radius2))
+
+      }
+        // radius1 = +prompt("vui long nhap ban kinh hinh 1");
+        // radius2 = +prompt("vui long nhap ban kinh hinh 2");
+        // alert("dien tich hinh 1 ="+dienTichvaChuVi(radius1)[0]+"\ndien tich hinh 2 = "+
+        dienTichvaChuVi(radius2)[0]+"\nchu vi hinh 1 = "+dienTichvaChuVi(radius1)[1]+"\nchu vi hinh 2
+        ="+dienTichvaChuVi(radius2));
+        function tiLe() {
+        let radius1 = document.getElementById("text1").value
+        let radius2 = document.getElementById("text2").value
+        let S1 = dienTichvaChuVi(radius1)[0];
+        let S2 = dienTichvaChuVi(radius2)[0];
+        let C1 = dienTichvaChuVi(radius1)[1];
+        let c2 = dienTichvaChuVi(radius2)[1];
+        tiLeDienTich = dienTichvaChuVi(radius1)[0] / dienTichvaChuVi(radius2)[0];
+        tiLeChuVi = dienTichvaChuVi(radius1)[1]/ dienTichvaChuVi(radius2)[1];
+        document.write("ti le dien tich = "+tiLeDienTich + "<br> ti le chu vi =" + tiLeChuVi);
+        document.write("<br>dien tich hinh 1 = "+S1+"<br>Chu vi hinh 1 = " +C1)
+        document.write("<br>dien tich hinh 2 = "+S2 + "<br>Chu vi hinh 2= " + c2)
+      }
+</script>
+
+</body>
+</html>

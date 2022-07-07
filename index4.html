@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="giaiThua"> </h1>
+  <input id="tinhGiaiThua" type="number">
+  <button onclick="tinhGiaiThua()">tính giai thừa</button>
+<script>
+  function tinhGiaiThua() {
+    let number = document.getElementById('tinhGiaiThua').value;
+    let ketQuaGiaiThua = 1
+    for (let i = 1; i <= number; i++) {
+      ketQuaGiaiThua = ketQuaGiaiThua * i
+
+document.getElementById('giaiThua').innerText = ketQuaGiaiThua
+    }
+
+  }
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
